@@ -9,7 +9,7 @@ The system currently has two distinct collections: a large one containing the da
 utilized for constructing the SALT dataset and a smaller one consisting of a
 limited corpus of Sami documents used for testing purposes. 
 
-### NB! Since the stored SALT dataset in the Chroma database is particularly large, only testdata is provided for the submission. Contact me on ronny_paul1999@hotmail.com to retrieve full dataset.
+### NB! Since the stored SALT dataset in the Chroma database is particularly large, only testdata is provided for the submission. Contact me on ronny_paul99@hotmail.com to retrieve full dataset.
 
 ## How to run application
 
