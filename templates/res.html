@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Plagiarism checker</title>
+
+    <script src="../static/scripts/error_handling.js"></script>
+
+
+</head>
+<body>
+
+
+    <div class="main">
+        
+        <div class="upload-container">
+
+            <div class="title-container">
+                <img src="static/leftfig.png">    
+                <h1 class="title">Sami Plagiarism Checker</h1>
+            </div>
+
+    
+            
+            <form action="/upload" method="post" class="up_text" onsubmit="validate_input(event)">
+                <textarea name="text_input" id="text_input" cols="100" rows="10" class="textarea" placeholder="Enter text or upload a file to check for plagiarism..."></textarea><br>
+            
+                <div class="submit">
+                    <input type="submit" class="submit_button" value="Check for plagiarism">
+                    
+                    <input type="file" id="uploadedFile" name="uploadedFile" hidden>
+                    <label for="uploadedFile" class="upload-label">
+                        <img src="static/upload_icon.png" alt="Upload" class="upload-img">
+                        Upload File  
+                    </label>
+                </div>       
+            </form>
+            <div id="error_message" class="error-message"></div>
+
+            <div class="results-container">
+                
+                {% if result and result|length > 0 %}
+                <h3>Plagiarism found in {{result|length}} file(s)</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Percentage of plagiarism</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key, value in result.items() %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td>{{ value }}</td>
+                            <td><a href="/download?path={{ key }}" class="download-link">Download</a></td>
+                
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                <p>No plagiarism detected.</p>
+                {% endif %}
+                
+                <a href="/" class="btn btn-primary">Clear</a>
+            </div>
+        
+        </div>
+    </div>
+
+
+    <div class="info">
+        <div class="info-step">
+            <img src="static/step1.svg" alt="Step 1">
+            <div class="info-text">
+                <h2>Upload Document</h2>
+                <p>Input text, or upload document in Northern Sami to check for plagiarism. The document is pre-processed, cleaned, and serialized.</p>
+            </div>
+        </div>
+        <div class="info-step">
+            <img src="static/step2.svg" alt="Step 2">
+            <div class="info-text">
+                <h2>Vector Transformation</h2>
+                <p>The following document is transformed into vectors using word embeddings from our Sami foundational model. It is a transformer model, using BLOOM architecture.</p>
+            </div>
+        </div>
+        <div class="info-step">
+            <img src="static/step3.svg" alt="Step 3">
+            <div class="info-text">
+                <h2 >Similarity Search</h2>
+                <p>Vectors are used to perform a similarity search on our dedicated Sami database, containing a dataset of 22 million tokens.</p>
+            </div>
+        </div>
+        <div class="info-step">
+            <img src="static/step4.svg" alt="Step 4">
+            <div class="info-text">
+                <h2>Retrieve Documents</h2>
+                <p>Relevant documents are retrieved and displayed.</p>
+            </div>
+        </div>
+    </div>
+        
+
+</body>
+</html>

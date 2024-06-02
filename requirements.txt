@@ -1,0 +1,5 @@
+chromadb
+transformers
+termcolor
+python-docx
+PyMuPDF
