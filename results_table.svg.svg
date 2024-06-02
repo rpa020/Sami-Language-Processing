@@ -1,0 +1,51 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="600" height="300" fill="white"/>
+  
+  <text x="20" y="20" font-family="Arial" font-size="16" font-weight="bold">Table 3.2: Results from experiments</text>
+  
+  <!-- Column headers -->
+  <text x="20" y="50" font-family="Arial" font-size="14" font-weight="bold">Model</text>
+  <text x="100" y="50" font-family="Arial" font-size="14" font-weight="bold">CE loss</text>
+  <text x="200" y="50" font-family="Arial" font-size="14" font-weight="bold">Perplexity</text>
+  <text x="320" y="50" font-family="Arial" font-size="14" font-weight="bold">Self-BLEU</text>
+  <text x="420" y="50" font-family="Arial" font-size="14" font-weight="bold">Inference time (s)</text>
+  
+  <!-- Row for model S -->
+  <text x="20" y="80" font-family="Arial" font-size="14">S</text>
+  <text x="100" y="80" font-family="Arial" font-size="14">7.01</text>
+  <text x="200" y="80" font-family="Arial" font-size="14">1160</text>
+  <text x="320" y="80" font-family="Arial" font-size="14">0.39</text>
+  <text x="420" y="80" font-family="Arial" font-size="14">1.77</text>
+  
+  <!-- Row for model D1 -->
+  <text x="20" y="110" font-family="Arial" font-size="14">D1</text>
+  <text x="100" y="110" font-family="Arial" font-size="14">7.66</text>
+  <text x="200" y="110" font-family="Arial" font-size="14">2130</text>
+  <text x="320" y="110" font-family="Arial" font-size="14">0.40</text>
+  <text x="420" y="110" font-family="Arial" font-size="14">1.14</text>
+  
+  <!-- Row for model D2 -->
+  <text x="20" y="140" font-family="Arial" font-size="14">D2</text>
+  <text x="100" y="140" font-family="Arial" font-size="14">4.27</text>
+  <text x="200" y="140" font-family="Arial" font-size="14">71.6</text>
+  <text x="320" y="140" font-family="Arial" font-size="14">0.32</text>
+  <text x="420" y="140" font-family="Arial" font-size="14">2.33</text>
+  
+  <!-- Row for model D3 -->
+  <text x="20" y="200" font-family="Arial" font-size="14">D3</text>
+  
+  <text x="100" y="190" font-family="Arial" font-size="14">For SME: 4.26</text>
+  <text x="200" y="190" font-family="Arial" font-size="14">For SME: 71.0</text>
+  <text x="320" y="190" font-family="Arial" font-size="14">For SME: 0.32</text>
+  <text x="420" y="190" font-family="Arial" font-size="14">For SME: 2.35</text>
+  
+  <text x="100" y="210" font-family="Arial" font-size="14">Overall: 4.15</text>
+  <text x="200" y="210" font-family="Arial" font-size="14">Overall: 63.5</text>
+  <text x="320" y="210" font-family="Arial" font-size="14">For FIN: 0.24</text>
+  <text x="420" y="210" font-family="Arial" font-size="14">For FIN: 2.26</text>
+  
+  <text x="320" y="230" font-family="Arial" font-size="14">For NOB: 0.27</text>
+  <text x="420" y="230" font-family="Arial" font-size="14">For NOB: 2.40</text>
+
+</svg>
