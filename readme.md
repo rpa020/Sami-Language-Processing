@@ -1,31 +1,13 @@
 ## Empowering Sami Language Processing: A Foundational Model Approach for Low-Resource Languages
 
-Sami, an indigenous language group comprising multiple languages, faces
-digital marginalization due to the limited data availability and sophisticated
-language models designed for its linguistic intricacies. This work focuses on
-increasing technological participation in the Sami languages. We draw the
-attention of the machine learning community towards the language modeling
-problem of Ultra Low Resource (ULR) languages. ULRL refer to languages that
-have a limited amount of available textual resources and a relatively low number
-of speakers. These languages often lack extensive corpora, comprehensive data
-across diverse domains, and sufficient linguistic research. Additionally, ULRLs
-are unsupported by mainstream Large Language Models (LLMs) like ChatGPT,
-so gathering artificial training data becomes problematic. With few speakers
-of these languages, manual data creation becomes even more challenging.
-However, it is essential to develop foundational models for these ULR languages
-to promote inclusion and impact LLMs’ tangible abilities. To this end, we have
-compiled the available Sami language resources from the web to create a clean
-dataset for training language models.
-
-
-To study the behavior of modern LLM models with ULR languages (Sami), we
-have experimented with different kinds of LLMs, mainly at the order of seven
-billion parameters. We have also explored the effect of multilingual LLM train-
-ing for ULRLs, and trained models with different settings. With the produced
-model, we explain how we can use it to implement a plagiarism detection
-application. This project is the first study on the Sami language for adapting
-non-statistical language models that use the latest natural language processing
-(NLP) developments.
+In the application, the Sami model (https://huggingface.co/rpa020/D2) generates the word embeddings as vector
+representation for each sentence within a document. These vectors are subse-
+quently stored within a dedicated vector database, ChromaDB. The metadata includes a unique identifier for each vector, the source document’s
+path within the server storage, and the original textual sentence that the vector
+represents. The
+system currently has two distinct collections: a large one containing the data
+utilized for constructing the SALT dataset and a smaller one consisting of a
+limited corpus of Sami documents used for testing purposes. Since the SALT data is particularly large, only testdata related to the expirements is provided as a demo. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
 
 ## How to run plagiarism application
 
@@ -33,11 +15,11 @@ non-statistical language models that use the latest natural language processing
 
 * Models can be downloaded from huggingface, https://huggingface.co/rpa020.
 * tokenizer is included in this folder
-* database is also included in this folder, but contains only data related to expirements. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
+* Database (chroma) is also included in this folder. Because the dataset from SALT is large, it only contains testdata related to expirements.
 
 
 
-## Experiment Results
+## Model Performance
 
 The experiments were done on three different decoder-only models and a
 single sequence-to-sequence model (https://huggingface.co/rpa020). Table shows the individual models
