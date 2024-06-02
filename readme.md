@@ -7,7 +7,7 @@ represents.
 
 The system currently has two distinct collections: a large one containing the data
 utilized for constructing the SALT dataset and a smaller one consisting of a
-limited corpus of Sami documents used for testing purposes. Since the SALT data is particularly large, only testdata related to the expirements is provided as a demo. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
+limited corpus of Sami documents used for testing purposes. Since the SALT data is particularly large, only testdata related to the expirements is provided in this folder as a demo. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
 
 ## How to run application
 
