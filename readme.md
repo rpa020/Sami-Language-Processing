@@ -1,4 +1,4 @@
-## Sami Plagiarism Detection Application
+# Sami Plagiarism Detection Application
 
 In the application, the Sami model (https://huggingface.co/rpa020/D2) generates the word embeddings as vector
 representation for each sentence within a document. These vectors are subsequently stored within a dedicated vector database, ChromaDB. The metadata includes a unique identifier for each vector, the source document’s
@@ -9,7 +9,7 @@ The system currently has two distinct collections: a large one containing the da
 utilized for constructing the SALT dataset and a smaller one consisting of a
 limited corpus of Sami documents used for testing purposes. 
 
-# NB! Since the SALT data is particularly large, only testdata related to the expirements is provided in this folder as a demo. Contact me on ronny_paul1999@hotmail.com to retrieve full dataset.
+## NB! Since the SALT data is particularly large, only testdata related to the expirements is provided in this folder as a demo. Contact me on ronny_paul1999@hotmail.com to retrieve full dataset.
 
 ## How to run application
 
