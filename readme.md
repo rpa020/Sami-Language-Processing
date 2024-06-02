@@ -1,4 +1,4 @@
-## Empowering Sami Language Processing: A Foundational Model Approach for Low-Resource Languages
+## Sami Plagiarism application
 
 In the application, the Sami model (https://huggingface.co/rpa020/D2) generates the word embeddings as vector
 representation for each sentence within a document. These vectors are subsequently stored within a dedicated vector database, ChromaDB. The metadata includes a unique identifier for each vector, the source document’s
