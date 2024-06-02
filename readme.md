@@ -25,12 +25,22 @@ ing for ULRLs, and trained models with different settings. With the produced
 model, we explain how we can use it to implement a plagiarism detection
 application. This project is the first study on the Sami language for adapting
 non-statistical language models that use the latest natural language processing
-(NLP) developments. We believe that the proposed dataset and findings from
-this study are going to accelerate future research for ULRLs.
+(NLP) developments.
 
+## How to run plagiarism application
+
+`python app.py model_path tokenizer_path database_path`
+
+* Models can be downloaded from huggingface, https://huggingface.co/rpa020.
+* tokenizer is included in this folder
+* database is also included in this folder, but contains only data related to expirements. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
+
+
+
+## Experiment Results
 
 The experiments were done on three different decoder-only models and a
-single sequence-to-sequence model. Table 3.2 shows the individual models
+single sequence-to-sequence model (https://huggingface.co/rpa020). Table shows the individual models
 performance in cross-entropy loss, perplexity, self-BLEU and inference time.
 Model S represents the sequence-to-sequence pegasus model with random
 initialized weights, i.e., it has no prior knowledge. D1 represents the decoder-
@@ -39,5 +49,4 @@ BLOOM models but have prior pretraining knowledge in Finnish. D2 is trained
 with Northern Sami only, while D3 has performed joint multilingual training
 in Northern Sami, Finnish, and Norwegian.
 
-## Experiment Results
 ![Results Table](results_table.svg)
