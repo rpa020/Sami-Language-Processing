@@ -3,8 +3,9 @@
 In the application, the Sami model (https://huggingface.co/rpa020/D2) generates the word embeddings as vector
 representation for each sentence within a document. These vectors are subsequently stored within a dedicated vector database, ChromaDB. The metadata includes a unique identifier for each vector, the source document’s
 path within the server storage, and the original textual sentence that the vector
-represents. The
-system currently has two distinct collections: a large one containing the data
+represents. 
+
+The system currently has two distinct collections: a large one containing the data
 utilized for constructing the SALT dataset and a smaller one consisting of a
 limited corpus of Sami documents used for testing purposes. Since the SALT data is particularly large, only testdata related to the expirements is provided as a demo. Contact me on ronny.paul1999@gmail.com to retrieve full dataset. 
 
